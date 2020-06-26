@@ -12,6 +12,7 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
+
 class Firebase  {
   constructor() {
     app.initializeApp(firebaseConfig);
@@ -20,9 +21,20 @@ class Firebase  {
   }
 
   // Auth API
-  doCreateUserWithEmailAndPassword = (email, password) => {
-    this.auth.createUserWithEmailAndPassword(email, password);
-  }
+  doCreateUserWithEmailAndPassword = (email, password) => (
+    this.auth.createUserWithEmailAndPassword(email, password)
+  );
+
+  doSignInWithEmailAndPassword = (email, password) => (
+    this.auth.signInWithEmailAndPasswird(email, password)
+  );
+
+  doSignOut = () => this.auth.signOut();
+
+  doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
+
+  doPasswordUpdate = password => this.auth.currentUser.updatePassword(password);
+
 }
 
 

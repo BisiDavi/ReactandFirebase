@@ -1,7 +1,7 @@
 export { default as Account } from '../Account/index';
 export { default as Admin } from '../Admin/index';
 export { default as App } from '../App/index';
-export { default as Firebase } from '../Firebase/index';
+export { default as Firebase } from '../Firebase/firebase';
 export { default as Home } from '../Home/index';
 export { default as Landing } from '../Landing/index';
 export { default as Navigation } from '../Navigation/index';
@@ -15,4 +15,5 @@ export { default as SignUp } from '../SignUp/'
 
 // firebase
 export { default as FirebaseContext } from '../Firebase/context';
-export { default as Firebase } from '../Firebase/firebase';
+export { default as withFirebase } from '../Firebase/context';
+
